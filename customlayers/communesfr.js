@@ -1,23 +1,23 @@
 {
 let styleAutre = [new ol.style.Style({
-  stroke: new ol.style.Stroke({
+  /*stroke: new ol.style.Stroke({
     color: 'rgba(255,255,255,0)',
     width: 0.8,
     lineDash: [4,4]
-  }),
+  }),*/
   fill: new ol.style.Fill({
-    color: 'rgba(0,0,0,0)'
+    color: "#"+Math.floor(Math.random()*16777215).toString(16)
   })
 })];
-
-let styleLoire = [new ol.style.Style({
-      stroke: new ol.style.Stroke({
+  
+let style3000 = [new ol.style.Style({
+      /*stroke: new ol.style.Stroke({
         color: 'rgba(45, 64,89,255)',
         width: 0.8,
         lineDash: [4,4]
-      }),
+      }),*/
       fill: new ol.style.Fill({
-        color: 'rgba(236, 116, 178, 0.8)'
+        color: 'rgba(100, 116, 178, 0.8)'
       })
     })];
 mviewer.customLayers.communesfr = {};
@@ -28,10 +28,14 @@ mviewer.customLayers.communesfr.layer = new ol.layer.Vector({
         }),
         style: function(feature, resolution) {
           var stl;
-          if(feature.get('nom').includes('Loire')) {
-              stl = styleLoire;
-          } else {
-              stl = styleAutre;
+
+          if(feature.get('code') > 0) {
+              value = feature.get('code');
+              stl = [new ol.style.Style({
+                fill: new ol.style.Fill({
+                  color: "rgba(255, "+Math.round((value*255)/95690)+", 0, 0.8)"
+                })
+              })];
           }
           return stl;
       }
