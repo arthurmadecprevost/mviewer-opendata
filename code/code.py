@@ -29,7 +29,17 @@ with open('../data/communes.geojson') as f:
                 dose_radon_habitat_collectif = infosCsv[6] 
             
             """
-            
+            populationCommune = -1
+            with open("../data/communes.csv") as fileCommune:
+                csvreaderCommune = csv.reader(fileCommune)
+                headerCommune = next(csvreaderCommune)
+                
+                for line in csvreaderCommune:
+                    infosCsvCommune = line[0].split(';')
+                    if infosCsvCommune[0] == infosCsv[0]:
+                        populationCommune = infosCsvCommune[2]
+                    
+                 
             
             ## Boucle while sur les differentes comunes du fichier json jusqu'a trouver la meme que la commune du fichier csv
             trouve = False
@@ -42,7 +52,7 @@ with open('../data/communes.geojson') as f:
                             Feature(
                                 "Feature",
                                 Geometry(i['geometry']['type'], i['geometry']['coordinates']),
-                                Properties(infosCsv[0], infosCsv[1], infosCsv[2], infosCsv[3],infosCsv[4], infosCsv[5], infosCsv[6])
+                                Properties(infosCsv[0], infosCsv[1], infosCsv[2], infosCsv[3],infosCsv[4], infosCsv[5], infosCsv[6], populationCommune)
                             )
                         )
 
