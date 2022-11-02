@@ -52,7 +52,7 @@
 				attribution="Sources: INSEE (RP) - OpenStreetMap | Traitements: Région Bretagne - Service connaissance, observation, planification et prospective" 
 				metadata="https://kartenn.region-bretagne.fr/geonetwork/srv/fre/catalog.search#/metadata/26324529-e0b7-450c-9506-2dcdca608f5f"
 				metadata-csw="https://kartenn.region-bretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=26324529-e0b7-450c-9506-2dcdca608f5f">
-				<template url="https://kartenn.region-bretagne.fr/kartoviz/apps/region/territoire/templates/territoire.pop.densite.mst"></template>
+				<template url="http://localhost:8080/mviewer-opendata/templates/territoire.pop.densite.mst"></template>
 			</layer>
 			<layer id="rp_struct_pop_geom" name="Part de la population selon la catégorie d'âge (%)"  visible="false" tiled="false"
 				searchable="false" queryable="true"

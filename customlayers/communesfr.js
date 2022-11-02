@@ -28,25 +28,88 @@ mviewer.customLayers.communesfr.layer = new ol.layer.Vector({
         }),
         style: function(feature, resolution) {
           var stl;
-
-          if(feature.get('dose_radon_maison_individuelle') > 2000) {
-              value = feature.get('dose_radon_maison_individuelle');
-              stl = [new ol.style.Style({
-                fill: new ol.style.Fill({
-                 //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-                 color: "rgba(255, 100, 0, 0.8)"
-                })
-              })];
-          } 
-          if(feature.get('dose_radon_maison_individuelle') < 2000) {
-            value = feature.get('dose_radon_maison_individuelle');
+          var radon = feature.get('dose_radon_maison_individuelle');
+          if(radon < 2000) {
             stl = [new ol.style.Style({
               fill: new ol.style.Fill({
                //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-               color: "rgba(100, 100, 0, 0.8)"
+               color: "rgba(0, 255, 75, 0.8)"
               })
             })];
           }  
+          if(radon >= 2000 && radon < 3000) {
+            stl = [new ol.style.Style({
+              fill: new ol.style.Fill({
+               //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
+               color: "rgba(255, 255, 0, 0.8)"
+              })
+            })];
+        }         
+        if(radon >= 3000 && radon < 4000) {
+          stl = [new ol.style.Style({
+            fill: new ol.style.Fill({
+             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
+             color: "rgba(255, 225, 0, 0.8)"
+            })
+          })];
+        }
+        if(radon >= 4000 && radon < 5000) {
+          stl = [new ol.style.Style({
+            fill: new ol.style.Fill({
+             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
+             color: "rgba(255, 200, 0, 0.8)"
+            })
+          })];
+        }
+        if(radon >= 5000 && radon < 6000) {
+          stl = [new ol.style.Style({
+            fill: new ol.style.Fill({
+             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
+             color: "rgba(255, 175, 0, 0.8)"
+            })
+          })];
+        } 
+        if(radon >= 6000 && radon < 7000) {
+          stl = [new ol.style.Style({
+            fill: new ol.style.Fill({
+             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
+             color: "rgba(255, 150, 0, 0.8)"
+            })
+          })];
+        } 
+        if(radon >= 7000 && radon < 8000) {
+          stl = [new ol.style.Style({
+            fill: new ol.style.Fill({
+             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
+             color: "rgba(255, 125, 0, 0.8)"
+            })
+          })];
+        } 
+        if(radon >= 8000 && radon < 9000) {
+          stl = [new ol.style.Style({
+            fill: new ol.style.Fill({
+             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
+             color: "rgba(255, 100, 0, 0.8)"
+            })
+          })];
+        } 
+        if(radon >= 9000 && radon < 10000) {
+          stl = [new ol.style.Style({
+            fill: new ol.style.Fill({
+             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
+             color: "rgba(255, 50, 0, 0.8)"
+            })
+          })];
+        } 
+        if(radon >= 10000) {
+          stl = [new ol.style.Style({
+            fill: new ol.style.Fill({
+             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
+             color: "rgba(255, 0, 0, 0.8)"
+            })
+          })];
+        } 
+
             return stl;
       }
 

@@ -3,28 +3,6 @@
 <h3 class="title-feature">{{nom}}</h3> 
 
 <div class="feature-text"><span>dose_radon_maison_individuelle:</span> {{dose_radon_maison_individuelle}}</div><br/>
+<div class="feature-text"><span>population:</span> {{population}}</div><br/>
 
-
-
-<!-- USE JSONFIELD (communes) wich returns json array to loop -->
-
-<h3> Liste des communes :</h3>
-<table style="width:100%;">
-    <thead>
-        <tr>
-            <th>NOM</th>
-            <th>CODE</th>
-
-        </tr>
-    </thead>
-    <tbody>
-        {{#communes}}
-            <tr>
-                <td>{{nom_commune}}</td>
-                <td>{{code_insee}}</td>
-            </tr>
-          {{/communes}}
-    </tbody>
-</table> 
-</li> 
 {{/features}}
