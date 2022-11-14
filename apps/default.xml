@@ -40,11 +40,11 @@
 
     <themes>
         <theme name="Projet Open Data" collapsed="false" id="projetopendata" icon="fas fa-radiation">
-            <layer id="radon_maison_individuelle" name="Dose de radon en habitation individuelle" visible="false" queryable="false" 
+            <layer id="radon_maison_individuelle" name="Dose de radon en habitation individuelle" visible="false" queryable="true" 
                 fields="nom_geo" aliases="Nom" 
                 type="customlayer" style="" opacity="1" legendurl="https://kartenn.region-bretagne.fr/kartoviz/apps/region/territoire/img/commune.png" 
                 url="http://localhost:8080/mviewer-opendata/customlayers/radon_maison_individuelle.js" 
-                tooltip="true" tooltipenabled="true"                    infopanel="bottom-panel"
+                tooltip="true" tooltipenabled="true" infopanel="bottom-panel"
                 attribution="Sources: FranceGEOJSON 2018, IRSN 2022" 
                 infoformat="application/vnd.ogc.gml"
                 metadata="https://geobretagne.fr/geonetwork/srv/eng/catalog.search?node=srv#/metadata/b08e6cb1-236c-49b7-88f9-42b500d274d5" 
