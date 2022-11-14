@@ -1,27 +1,6 @@
 {
-let styleAutre = [new ol.style.Style({
-  /*stroke: new ol.style.Stroke({
-    color: 'rgba(255,255,255,0)',
-    width: 0.8,
-    lineDash: [4,4]
-  }),*/
-  fill: new ol.style.Fill({
-    color: "#"+Math.floor(Math.random()*16777215).toString(16)
-  })
-})];
-  
-let style3000 = [new ol.style.Style({
-      /*stroke: new ol.style.Stroke({
-        color: 'rgba(45, 64,89,255)',
-        width: 0.8,
-        lineDash: [4,4]
-      }),*/
-      fill: new ol.style.Fill({
-        color: 'rgba(255, 255, 0, 0.8)'
-      })
-    })];
-mviewer.customLayers.communesfr = {};
-mviewer.customLayers.communesfr.layer = new ol.layer.Vector({
+mviewer.customLayers.radon_maison_individuelle = {};
+mviewer.customLayers.radon_maison_individuelle.layer = new ol.layer.Vector({
         source: new ol.source.Vector({
             url: "data/Result.geojson",
             format: new ol.format.GeoJSON()
@@ -109,14 +88,16 @@ mviewer.customLayers.communesfr.layer = new ol.layer.Vector({
             })
           })];
         } 
-
+        /*if (radon >= 2000) {
+          popDanger += parseInt(feature.get('population'));
+          console.log("pop:"+popDanger);
+        }*/
             return stl;
       }
 
   });
-mviewer.customLayers.communesfr.handle = false;
+mviewer.customLayers.radon_maison_individuelle.handle = false;
 } 
-
 /*
         style: new ol.style.Style({
                   stroke: new ol.style.Stroke({
