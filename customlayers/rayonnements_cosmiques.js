@@ -11,24 +11,21 @@ mviewer.customLayers.rayonnements_cosmiques.layer = new ol.layer.Vector({
           if(radon < 400) {
             stl = [new ol.style.Style({
               fill: new ol.style.Fill({
-               //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-               color: "rgba(0, 255, 75, 0.8)"
+               color: "rgba(255,255,178)"
               })
             })];
           }  
         if(radon >= 400 && radon < 500) {
           stl = [new ol.style.Style({
             fill: new ol.style.Fill({
-             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-             color: "rgba(255, 255, 0, 0.8)"
+             color: "rgba(253,141,60)"
             })
           })];
         } 
         if(radon >= 500) {
           stl = [new ol.style.Style({
             fill: new ol.style.Fill({
-             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-             color: "rgba(255, 0, 0, 0.8)"
+             color: "rgba(177,0,38)"
             })
           })];
         } 

@@ -2,7 +2,7 @@
 <li class="item" id="{{feature_ol_uid}}"> 
 <h3 class="title-feature">{{nom}}</h3> 
 
-<div class="feature-text"><span>Dose de radon en habitation individuelle:</span> {{dose_radon_maison_individuelle}} µSv/an</div><br/>
+<div class="feature-text"><span><b>Dose de radon en habitation individuelle:</b></span> {{dose_radon_maison_individuelle}} µSv/an</div><br/>
 <div class="feature-text"><span>Population:</span> {{population}} habitants</div><br/>
 
 {{/features}}

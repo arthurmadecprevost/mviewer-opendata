@@ -11,32 +11,28 @@ mviewer.customLayers.rayonnements_telluriques.layer = new ol.layer.Vector({
           if(rayonnements < 500) {
             stl = [new ol.style.Style({
               fill: new ol.style.Fill({
-               //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-               color: "rgba(0, 255, 75, 0.8)"
+               color: "rgba(255,255,178)"
               })
             })];
           }  
           if(rayonnements >= 500 && rayonnements < 1000) {
             stl = [new ol.style.Style({
               fill: new ol.style.Fill({
-               //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-               color: "rgba(255, 255, 0, 0.8)"
+               color: "rgba(254,178,76)"
               })
             })];
           }
           if(rayonnements >= 1000 && rayonnements < 1500) {
             stl = [new ol.style.Style({
               fill: new ol.style.Fill({
-              //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-              color: "rgba(255, 50, 0, 0.8)"
+              color: "rgba(252,78,42)"
               })
             })];
           } 
           if(rayonnements >= 1500) {
             stl = [new ol.style.Style({
               fill: new ol.style.Fill({
-              //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-              color: "rgba(255, 0, 0, 0.8)"
+              color: "rgba(177,0,38)"
               })
             })];
           } 

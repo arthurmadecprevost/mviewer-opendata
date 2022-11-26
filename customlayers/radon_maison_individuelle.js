@@ -11,87 +11,52 @@ mviewer.customLayers.radon_maison_individuelle.layer = new ol.layer.Vector({
           if(radon < 2000) {
             stl = [new ol.style.Style({
               fill: new ol.style.Fill({
-               //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-               color: "rgba(0, 255, 75, 0.8)"
+               color: "rgba(255,255,178)"
               })
             })];
           }  
-          if(radon >= 2000 && radon < 3000) {
+          if(radon >= 2000 && radon < 4000) {
             stl = [new ol.style.Style({
               fill: new ol.style.Fill({
-               //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-               color: "rgba(255, 255, 0, 0.8)"
+               color: "rgba(254,217,118)"
               })
             })];
-        }         
-        if(radon >= 3000 && radon < 4000) {
+        }
+        if(radon >= 4000 && radon < 6000) {
           stl = [new ol.style.Style({
             fill: new ol.style.Fill({
-             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-             color: "rgba(255, 225, 0, 0.8)"
+             color: "rgba(254,178,76)"
             })
           })];
         }
-        if(radon >= 4000 && radon < 5000) {
+        if(radon >= 6000 && radon < 8000) {
           stl = [new ol.style.Style({
             fill: new ol.style.Fill({
-             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-             color: "rgba(255, 200, 0, 0.8)"
+             color: "rgba(253,141,60)"
             })
           })];
         }
-        if(radon >= 5000 && radon < 6000) {
+        if(radon >= 8000 && radon < 10000) {
           stl = [new ol.style.Style({
             fill: new ol.style.Fill({
-             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-             color: "rgba(255, 175, 0, 0.8)"
+             color: "rgba(252,78,42)"
             })
           })];
         } 
-        if(radon >= 6000 && radon < 7000) {
+        if(radon >= 10000 && radon < 12000) {
           stl = [new ol.style.Style({
             fill: new ol.style.Fill({
-             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-             color: "rgba(255, 150, 0, 0.8)"
+             color: "rgba(227,26,28)"
             })
           })];
         } 
-        if(radon >= 7000 && radon < 8000) {
+        if(radon >= 12000) {
           stl = [new ol.style.Style({
             fill: new ol.style.Fill({
-             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-             color: "rgba(255, 125, 0, 0.8)"
+             color: "rgba(177,0,38)"
             })
           })];
         } 
-        if(radon >= 8000 && radon < 9000) {
-          stl = [new ol.style.Style({
-            fill: new ol.style.Fill({
-             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-             color: "rgba(255, 100, 0, 0.8)"
-            })
-          })];
-        } 
-        if(radon >= 9000 && radon < 10000) {
-          stl = [new ol.style.Style({
-            fill: new ol.style.Fill({
-             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-             color: "rgba(255, 50, 0, 0.8)"
-            })
-          })];
-        } 
-        if(radon >= 10000) {
-          stl = [new ol.style.Style({
-            fill: new ol.style.Fill({
-             //color: "rgba("+Math.round((value*255)/7071)+", 255, 0, 0.8)"
-             color: "rgba(255, 0, 0, 0.8)"
-            })
-          })];
-        } 
-        /*if (radon >= 2000) {
-          popDanger += parseInt(feature.get('population'));
-          console.log("pop:"+popDanger);
-        }*/
             return stl;
       }
 
