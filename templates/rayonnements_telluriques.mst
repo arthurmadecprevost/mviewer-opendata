@@ -1,0 +1,8 @@
+{{#features}} 
+<li class="item" id="{{feature_ol_uid}}"> 
+<h3 class="title-feature">{{nom}}</h3> 
+
+<div class="feature-text"><span><b>Dose de rayonnements telluriques:</b></span> {{dose_rayonnements_telluriques}} µSv/an</div><br/>
+<div class="feature-text"><span>Population:</span> {{population}} habitants</div><br/>
+
+{{/features}}
